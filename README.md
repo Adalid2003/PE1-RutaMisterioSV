@@ -1,4 +1,6 @@
-# PE1-nintendoSV
+# PE1-RutaMisterioSV
+# "Descubre lo que la noche esconde en El Salvador
+
 
 Universidad de El Salvador
 Facultad de Ingeniería y Arquitectura
