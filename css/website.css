@@ -1,0 +1,351 @@
+/* ==========================================================================
+ *  RutaMisterioSV - Hoja de Estilos Global (website.css)
+ *  Proyecto: Programación para Internet (PPI115) - Ciclo II 2026
+ *  Universidad de El Salvador
+ *  ========================================================================== */
+
+/* --------------------------------------------------------------------------
+ *  1. PALETA DE COLORES Y VARIABLES GLOBALES
+ *  -------------------------------------------------------------------------- */
+:root {
+    /* 1. Base: Identidad Nacional y Noche (Originales compartidos) */
+        --azul-sv: #0047AB;
+        /* Azul bandera */
+        --blanco-sv: #FFFFFF;
+        /* Blanco bandera */
+        --azul-oscuro: #0a1128;
+        /* Fondo noche profunda */
+        --gris-oscuro: #121212;
+        /* Fondo base general */
+        --gris-tarjeta: #1e1e1e;
+        /* Contenedores oscuros */
+        --cian-espectral: #00b4d8;
+        /* Detalles brillantes y links */
+    
+        /* 2. Opciones para "Lugares Abandonados" (Naturaleza reclamando ruinas) */
+        --verde-musgo: #4A5D23;
+        /* Vegetación en paredes antiguas */
+        --gris-ceniza: #708090;
+        /* Piedra y concreto viejo */
+        --cafe-tierra: #6B4423;
+        /* Caminos de tierra y madera podrida */
+    
+        /* 3. Opciones para "Rutas de Leyendas" (Magia, misticismo y folklore) */
+        --morado-brujo: #301934;
+        /* Magia oscura y misterio */
+        --lila-niebla: #6A5ACD;
+        /* Niebla de madrugada */
+        --verde-cipitio: #2E8B57;
+        /* Tonos de monte y selva */
+    
+        /* 4. Opciones para "Relatos de la Comunidad" (Tensión y fogata) */
+        --rojo-sangre: #8B0000;
+        /* Peligro, suspenso y ojos del Cadejo */
+        --naranja-vela: #D2691E;
+        /* Luz de velas para contar historias */
+    
+        /* 5. Opciones para "Noches/Eventos" (Iluminación nocturna) */
+        --amarillo-farol: #FFD700;
+        /* Luz de linternas y faroles de calle */
+        --plata-luna: #C0C0C0;
+        /* Reflejos de luna llena en recorridos */
+}
+
+/* --------------------------------------------------------------------------
+ *  2. ESTILOS BASE Y REGLAS GENERALES
+ *  -------------------------------------------------------------------------- */
+html, body {
+    overflow-x: hidden;
+    max-width: 100%;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body.bg-fondo-oscuro {
+    background-color: var(--gris-oscuro);
+    color: var(--blanco-sv);
+}
+
+/* --------------------------------------------------------------------------
+ *  3. NAVEGACIÓN Y CABECERA (NAVBAR)
+ *  -------------------------------------------------------------------------- */
+.bg-azul-nacional {
+    background-color: var(--azul-oscuro) !important;
+    border-bottom: 2px solid var(--azul-sv);
+}
+
+/* Control estricto del Isotipo / Favicon en Navbar */
+.icon-navbar {
+    max-height: 35px !important;
+    width: auto !important;
+    object-fit: contain;
+    transition: transform 0.2s ease;
+}
+
+.icon-navbar:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    color: rgba(255, 255, 255, 0.85);
+    transition: color 0.2s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: var(--celeste-brillante) !important;
+}
+
+/* --------------------------------------------------------------------------
+ *  4. CLASES DE UTILIDAD Y COLORES
+ *  -------------------------------------------------------------------------- */
+.text-blanco-sv {
+    color: var(--blanco-sv) !important;
+}
+
+.text-info {
+    color: var(--celeste-brillante) !important;
+}
+
+.borde-azul {
+    border: 1px solid var(--azul-sv) !important;
+}
+
+/* --------------------------------------------------------------------------
+ *  5. HERO SECTION Y LOGO PRINCIPAL
+ *  -------------------------------------------------------------------------- */
+.hero-section {
+    background: linear-gradient(to bottom, var(--azul-oscuro), var(--gris-oscuro));
+}
+
+/* Control estricto del Logo Ilustrado Centrado */
+.logo-hero {
+    max-height: 120px !important;
+    width: auto !important;
+    display: inline-block;
+    filter: drop-shadow(0px 3px 8px rgba(0, 180, 216, 0.25)); /* Sombra resplandeciente cian */
+    transition: transform 0.3s ease;
+}
+
+.logo-hero:hover {
+    transform: scale(1.02);
+}
+
+/* --------------------------------------------------------------------------
+ *  6. BOTONES Y TARJETAS
+ *  -------------------------------------------------------------------------- */
+.btn-explorar {
+    background-color: var(--azul-sv);
+    color: var(--blanco-sv);
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-explorar:hover {
+    background-color: var(--celeste-brillante);
+    color: var(--gris-oscuro);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0, 180, 216, 0.3);
+}
+
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 71, 171, 0.3) !important;
+}
+
+/* --------------------------------------------------------------------------
+ *  7. BREADCRUMB (RASTRO DE MIGAJAS PARA SUBPÁGINAS)
+ *  -------------------------------------------------------------------------- */
+.breadcrumb {
+    background-color: rgba(0, 71, 171, 0.2);
+    padding: 8px 15px;
+    border-radius: 5px;
+    border: 1px solid rgba(0, 71, 171, 0.3);
+}
+
+.breadcrumb-item + .breadcrumb-item::before {
+    color: var(--celeste-brillante);
+}
+
+.breadcrumb-item a {
+    color: var(--celeste-brillante);
+    text-decoration: none;
+}
+
+.breadcrumb-item a:hover {
+    text-decoration: underline;
+}
+
+/* --------------------------------------------------------------------------
+ *  8. MEDIA QUERIES: LAPTOPS Y PANTALLAS COMPACTAS (720p / 768p)
+ *  -------------------------------------------------------------------------- */
+@media (min-width: 992px) and (max-height: 800px) {
+    .hero-section {
+        padding-top: 5px !important;
+        padding-bottom: 5px !important;
+    }
+
+    .logo-hero {
+        max-height: 105px !important;
+    }
+
+    .card-body {
+        padding: 0.85rem !important;
+    }
+
+    p.lead {
+        font-size: 1.05rem !important;
+    }
+}
+
+/* --------------------------------------------------------------------------
+ *  9. MEDIA QUERIES: DISPOSITIVOS MÓVILES (SMARTPHONES)
+ *  -------------------------------------------------------------------------- */
+@media (max-width: 768px) {
+    .logo-hero {
+        max-height: 110px !important;
+    }
+
+    .hero-section {
+        padding: 20px 15px !important;
+    }
+
+    .hero-section p.lead {
+        font-size: 1.1rem !important;
+    }
+
+    .btn-explorar {
+        width: 100%;
+        padding: 10px 20px;
+    }
+
+    .navbar-collapse {
+        background-color: var(--azul-oscuro);
+        padding: 15px;
+        border-radius: 8px;
+        margin-top: 10px;
+        border: 1px solid var(--azul-sv);
+    }
+}
+
+/* ==========================================================================
+   CLASES DE UTILIDAD PARA LA PALETA EXTENDIDA
+   ========================================================================== */
+/* Textos */
+.text-cian-espectral {
+    color: var(--cian-espectral) !important;
+}
+
+.text-verde-musgo {
+    color: var(--verde-musgo) !important;
+}
+
+.text-gris-ceniza {
+    color: var(--gris-ceniza) !important;
+}
+
+/* Fondos */
+.bg-cafe-tierra {
+    background-color: var(--cafe-tierra) !important;
+}
+
+.bg-gris-tarjeta {
+    background-color: var(--gris-tarjeta) !important;
+}
+
+/* Bordes */
+.borde-verde-musgo {
+    border: 1px solid var(--verde-musgo) !important;
+}
+
+.borde-cian-espectral {
+    border: 1px solid var(--cian-espectral) !important;
+}
+
+/* ==========================================
+   ESTILOS JAVASCRIPT (INTERACTIVIDAD)
+   ========================================== */
+
+/* Efecto Linterna */
+#linterna-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    pointer-events: none;
+    /* Para que no bloquee los clics */
+    z-index: 9999;
+    /* Gradiente que es transparente en el centro y oscuro a los bordes */
+    background: radial-gradient(circle 250px at var(--x, 50vw) var(--y, 50vh), transparent 0%, rgba(10, 17, 40, 0.75) 100%);
+    transition: opacity 0.3s ease;
+}
+
+/* Scroll Reveal */
+.reveal {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: all 0.8s cubic-bezier(0.5, 0, 0, 1);
+}
+
+.reveal.activo {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Contenedor del Deslizador Antes/Después */
+.slider-container {
+    position: relative;
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+    border: 2px solid var(--celeste-brillante);
+    border-radius: 8px;
+    aspect-ratio: 16/9;
+    /* Mantiene la proporción de las imágenes */
+}
+
+.slider-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* La imagen superior (Después) usa clip-path para cortarse */
+.img-after {
+    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
+}
+
+/* El input range invisible que controla el corte */
+.slider-input {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: ew-resize;
+    z-index: 10;
+}
+
+/* Línea divisoria */
+.slider-line {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    width: 4px;
+    background: var(--celeste-brillante);
+    pointer-events: none;
+    transform: translateX(-50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    z-index: 5;
+}
