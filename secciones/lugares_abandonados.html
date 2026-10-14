@@ -118,9 +118,21 @@
         <h1 class="text-verde-musgo fw-bold mb-3">Catálogo de Exploración (Urbex)</h1>
         <p class="lead text-gris-ceniza mb-5">La naturaleza devora lentamente lo que el hombre dejó atrás. Explora nuestras galerías documentales de sitios olvidados en El Salvador.</p>
 
+        <div class="contenedor-filtros">
+            <input type="text" id="buscador" placeholder="Buscar lugar por nombre..." class="input-busqueda">
+
+            <select id="filtro-ubicacion" class="select-filtro">
+                <option value="todos">Cualquier ubicación</option>
+                <option value="chalatenango">Chalatenango</option>
+                <option value="santa-ana">Santa Ana</option>
+                <option value="la-paz">La Paz</option>
+                <option value="la-libertad">La Libertad</option>
+            </select>
+        </div>
+
         <div class="row g-4 mb-5">
             <div class="col-md-6 col-lg-6">
-                <article class="card h-100 bg-gris-tarjeta borde-verde-musgo text-light shadow">
+                <article class="card h-100 bg-gris-tarjeta borde-verde-musgo text-light shadow tarjeta-lugar" data-ubicacion="chalatenango">
                     <!-- Carrusel de Bootstrap -->
                     <div id="carruselCasona" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner rounded-top">
@@ -183,7 +195,7 @@
             </div>
 
             <div class="col-md-6 col-lg-6">
-                <article class="card h-100 bg-gris-tarjeta borde-verde-musgo text-light shadow">
+                <article class="card h-100 bg-gris-tarjeta borde-verde-musgo text-light shadow tarjeta-lugar" data-ubicacion="santa-ana">
                     <div id="carruselCasino" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner rounded-top">
                             <div class="carousel-item active">
@@ -232,7 +244,7 @@
             </div>
 
             <div class="col-md-6 col-lg-6">
-                <article class="card h-100 bg-gris-tarjeta borde-verde-musgo text-light shadow">
+                <article class="card h-100 bg-gris-tarjeta borde-verde-musgo text-light shadow tarjeta-lugar" data-ubicacion="la-paz">
                     <div id="carruselEstacion" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner rounded-top">
                             <div class="carousel-item active">
@@ -282,7 +294,7 @@
             </div>
 
             <div class="col-md-6 col-lg-6">
-                <article class="card h-100 bg-gris-tarjeta borde-cian-espectral text-light shadow">
+                <article class="card h-100 bg-gris-tarjeta borde-cian-espectral text-light shadow tarjeta-lugar" data-ubicacion="la-libertad">
                     <div id="carruselMansion" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner rounded-top">
                             <div class="carousel-item active">

@@ -1,4 +1,35 @@
 document.addEventListener("DOMContentLoaded", function() {
+
+    const buscador = document.getElementById('buscador');
+    const filtroUbicacion = document.getElementById('filtro-ubicacion');
+
+    // Cambia '.tarjeta-lugar' por la clase real que usen tus tarjetas
+    const tarjetas = document.querySelectorAll('.tarjeta-lugar');
+
+    function filtrarLugares() {
+        const textoBusqueda = buscador.value.toLowerCase();
+        const ubicacionSeleccionada = filtroUbicacion.value;
+
+        tarjetas.forEach(tarjeta => {
+            // Asumimos que el título del lugar está en una etiqueta <h3>
+            const titulo = tarjeta.querySelector('h3').textContent.toLowerCase();
+            const ubicacionTarjeta = tarjeta.getAttribute('data-ubicacion');
+
+            const coincideTexto = titulo.includes(textoBusqueda);
+            const coincideUbicacion = (ubicacionSeleccionada === 'todos') || (ubicacionTarjeta === ubicacionSeleccionada);
+
+            // Ocultar o mostrar según los filtros
+            if (coincideTexto && coincideUbicacion) {
+                tarjeta.style.display = ''; // Vuelve al display original (block/flex)
+            } else {
+                tarjeta.style.display = 'none'; // Oculta la tarjeta
+            }
+        });
+    }
+
+    // Ejecutar la función cada vez que el usuario escriba o cambie el select
+    buscador.addEventListener('input', filtrarLugares);
+    filtroUbicacion.addEventListener('change', filtrarLugares);
     
     const mapaElement = document.getElementById('mapa-ruinas');
     

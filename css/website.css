@@ -349,3 +349,21 @@ body.bg-fondo-oscuro {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
     z-index: 5;
 }
+
+.contenedor-filtros {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 30px;
+    justify-content: center;
+}
+
+.input-busqueda, .select-filtro {
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.input-busqueda {
+    width: 300px;
+}
