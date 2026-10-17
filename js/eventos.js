@@ -111,8 +111,8 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         }
 
-        actualizar();
         const intervalo = setInterval(actualizar, 1000);
+        actualizar();
     }
 
     filtroCategoria.addEventListener('change', filtrarEventos);
