@@ -3,7 +3,6 @@ document.addEventListener("DOMContentLoaded", function() {
     const buscador = document.getElementById('buscador');
     const filtroUbicacion = document.getElementById('filtro-ubicacion');
 
-    // Cambia '.tarjeta-lugar' por la clase real que usen tus tarjetas
     const tarjetas = document.querySelectorAll('.tarjeta-lugar');
 
     function filtrarLugares() {
@@ -11,7 +10,6 @@ document.addEventListener("DOMContentLoaded", function() {
         const ubicacionSeleccionada = filtroUbicacion.value;
 
         tarjetas.forEach(tarjeta => {
-            // Asumimos que el título del lugar está en una etiqueta <h3>
             const titulo = tarjeta.querySelector('.card-title').textContent.toLowerCase();
             const ubicacionTarjeta = tarjeta.getAttribute('data-ubicacion');
 

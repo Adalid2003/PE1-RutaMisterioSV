@@ -342,43 +342,9 @@ body.linterna-off #linterna-overlay {
     transform: translateY(0);
 }
 
-/* Contenedor del Deslizador Antes/Después */
-.slider-container {
-    position: relative;
-    width: 100%;
-    max-width: 800px;
-    margin: 0 auto;
-    overflow: hidden;
-    border: 2px solid var(--celeste-brillante);
-    border-radius: 8px;
-    aspect-ratio: 16/9;
-    /* Mantiene la proporción de las imágenes */
-}
-
-.slider-img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
-
 /* La imagen superior (Después) usa clip-path para cortarse */
 .img-after {
     clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-}
-
-/* El input range invisible que controla el corte */
-.slider-input {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-    cursor: ew-resize;
-    z-index: 10;
 }
 
 /* Línea divisoria */
