@@ -49,6 +49,14 @@
         /* Luz de linternas y faroles de calle */
         --plata-luna: #C0C0C0;
         /* Reflejos de luna llena en recorridos */
+
+        /* 6. Celeste de acentos (hover/activo del navbar, botones, breadcrumb) */
+        --celeste-brillante: #4cc9f0;
+
+        /* 7. Variantes claras SOLO PARA TEXTO sobre fondos oscuros (contraste WCAG AA >= 4.5:1).
+              Los colores originales siguen usándose en bordes y fondos. */
+        --verde-musgo-texto: #8FAE4B;
+        --gris-ceniza-texto: #8FA0B0;
 }
 
 /* --------------------------------------------------------------------------
@@ -241,11 +249,17 @@ body.bg-fondo-oscuro {
 }
 
 .text-verde-musgo {
-    color: var(--verde-musgo) !important;
+    color: var(--verde-musgo-texto) !important;
 }
 
 .text-gris-ceniza {
-    color: var(--gris-ceniza) !important;
+    color: var(--gris-ceniza-texto) !important;
+}
+
+/* Bootstrap define estos grises para fondo claro (sobre las tarjetas oscuras casi no se leen) */
+.text-secondary,
+.text-muted {
+    color: var(--gris-ceniza-texto) !important;
 }
 
 /* Fondos */
@@ -281,8 +295,39 @@ body.bg-fondo-oscuro {
     /* Para que no bloquee los clics */
     z-index: 9999;
     /* Gradiente que es transparente en el centro y oscuro a los bordes */
-    background: radial-gradient(circle 250px at var(--x, 50vw) var(--y, 50vh), transparent 0%, rgba(10, 17, 40, 0.75) 100%);
+    /* Opacidad ajustable: con 0.2 el texto sigue siendo legible fuera del círculo (subir a 0.15 para cumplir AA en todos los colores) */
+    --linterna-opacidad: 0.2;
+    background: radial-gradient(circle 250px at var(--x, 50vw) var(--y, 50vh), transparent 0%, rgba(10, 17, 40, var(--linterna-opacidad)) 100%);
     transition: opacity 0.3s ease;
+}
+
+/* Efecto desactivado por la persona usuaria (botón .linterna-toggle) */
+body.linterna-off #linterna-overlay {
+    display: none;
+}
+
+/* Botón para activar/desactivar la linterna (solo se crea en dispositivos con mouse) */
+.linterna-toggle {
+    position: fixed;
+    left: 1rem;
+    bottom: 1rem;
+    z-index: 10000; /* por encima del overlay */
+    width: 2.5rem;
+    height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background-color: var(--azul-oscuro);
+    color: var(--cian-espectral);
+    border: 1px solid var(--cian-espectral);
+    cursor: pointer;
+}
+
+.linterna-toggle:hover,
+.linterna-toggle:focus-visible {
+    background-color: var(--cian-espectral);
+    color: var(--gris-oscuro);
 }
 
 /* Scroll Reveal */

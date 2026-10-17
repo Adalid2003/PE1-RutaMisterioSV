@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
         tarjetas.forEach(tarjeta => {
             // Asumimos que el título del lugar está en una etiqueta <h3>
-            const titulo = tarjeta.querySelector('h3').textContent.toLowerCase();
+            const titulo = tarjeta.querySelector('.card-title').textContent.toLowerCase();
             const ubicacionTarjeta = tarjeta.getAttribute('data-ubicacion');
 
             const coincideTexto = titulo.includes(textoBusqueda);
