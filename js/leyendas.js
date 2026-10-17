@@ -11,7 +11,7 @@ document.addEventListener("DOMContentLoaded", function() {
         let visibles = 0;
 
         tarjetas.forEach(tarjeta => {
-            const titulo = tarjeta.querySelector('h3').textContent.toLowerCase();
+            const titulo = tarjeta.querySelector('.card-title').textContent.toLowerCase();
             const tipoTarjeta = tarjeta.getAttribute('data-tipo');
 
             const coincideTexto = titulo.includes(textoBusqueda);
@@ -25,14 +25,12 @@ document.addEventListener("DOMContentLoaded", function() {
             }
         });
 
-        // Mensaje cuando ninguna tarjeta coincide
         sinResultados.classList.toggle('d-none', visibles > 0);
     }
 
     buscador.addEventListener('input', filtrarLeyendas);
     filtroTipo.addEventListener('change', filtrarLeyendas);
 
-    // Cambia el texto del botón "Leer más" / "Leer menos"
     document.querySelectorAll('.tarjeta-leyenda .collapse').forEach(bloque => {
         const boton = document.querySelector(`[data-bs-target="#${bloque.id}"]`);
         bloque.addEventListener('shown.bs.collapse', () => boton.textContent = 'Leer menos');
@@ -98,7 +96,6 @@ document.addEventListener("DOMContentLoaded", function() {
             marcador.bindPopup(popupContent);
         });
 
-        // Ajusta el zoom para que se vean todos los puntos
         mapa.fitBounds(ubicaciones.map(p => p.coord), { padding: [30, 30] });
     }
 });

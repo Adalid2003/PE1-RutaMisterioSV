@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-    // ---- Efecto linterna ----
-    // Solo en dispositivos con mouse/trackpad: en pantallas táctiles no hay cursor que seguir
-    // y el círculo quedaría fijo en el centro oscureciendo el resto de la pantalla.
     if (window.matchMedia("(hover: hover) and (pointer: fine)").matches) {
         const CLAVE = "linterna-activa";
         const reducirMovimiento = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
@@ -10,13 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
             try {
                 const guardada = localStorage.getItem(CLAVE);
                 if (guardada !== null) return guardada === "1";
-            } catch (e) { /* almacenamiento no disponible */ }
-            // Sin preferencia guardada: apagada si el sistema pide reducir el movimiento
+            } catch (e) {
+                console.warn("No se pudo leer la preferencia de la linterna:", e);
+            }
             return !reducirMovimiento;
         }
 
         function guardarPreferencia(valor) {
-            try { localStorage.setItem(CLAVE, valor ? "1" : "0"); } catch (e) { /* ignorar */ }
+            try { localStorage.setItem(CLAVE, valor ? "1" : "0"); } catch (e) {
+                console.warn("No se pudo guardar la preferencia de la linterna:", e);
+            }
         }
 
         const flashlight = document.createElement("div");

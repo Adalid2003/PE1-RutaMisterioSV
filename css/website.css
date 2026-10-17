@@ -4,64 +4,30 @@
  *  Universidad de El Salvador
  *  ========================================================================== */
 
-/* --------------------------------------------------------------------------
- *  1. PALETA DE COLORES Y VARIABLES GLOBALES
- *  -------------------------------------------------------------------------- */
 :root {
-    /* 1. Base: Identidad Nacional y Noche (Originales compartidos) */
         --azul-sv: #0047AB;
-        /* Azul bandera */
         --blanco-sv: #FFFFFF;
-        /* Blanco bandera */
         --azul-oscuro: #0a1128;
-        /* Fondo noche profunda */
         --gris-oscuro: #121212;
-        /* Fondo base general */
         --gris-tarjeta: #1e1e1e;
-        /* Contenedores oscuros */
         --cian-espectral: #00b4d8;
-        /* Detalles brillantes y links */
-    
-        /* 2. Opciones para "Lugares Abandonados" (Naturaleza reclamando ruinas) */
         --verde-musgo: #4A5D23;
-        /* Vegetación en paredes antiguas */
         --gris-ceniza: #708090;
-        /* Piedra y concreto viejo */
         --cafe-tierra: #6B4423;
-        /* Caminos de tierra y madera podrida */
-    
-        /* 3. Opciones para "Rutas de Leyendas" (Magia, misticismo y folklore) */
         --morado-brujo: #301934;
-        /* Magia oscura y misterio */
         --lila-niebla: #6A5ACD;
-        /* Niebla de madrugada */
         --verde-cipitio: #2E8B57;
-        /* Tonos de monte y selva */
-    
-        /* 4. Opciones para "Relatos de la Comunidad" (Tensión y fogata) */
         --rojo-sangre: #8B0000;
-        /* Peligro, suspenso y ojos del Cadejo */
         --naranja-vela: #D2691E;
-        /* Luz de velas para contar historias */
-    
-        /* 5. Opciones para "Noches/Eventos" (Iluminación nocturna) */
         --amarillo-farol: #FFD700;
-        /* Luz de linternas y faroles de calle */
         --plata-luna: #C0C0C0;
-        /* Reflejos de luna llena en recorridos */
-
-        /* 6. Celeste de acentos (hover/activo del navbar, botones, breadcrumb) */
         --celeste-brillante: #4cc9f0;
-
-        /* 7. Variantes claras SOLO PARA TEXTO sobre fondos oscuros (contraste WCAG AA >= 4.5:1).
-              Los colores originales siguen usándose en bordes y fondos. */
         --verde-musgo-texto: #8FAE4B;
         --gris-ceniza-texto: #8FA0B0;
+        --verde-cipitio-texto: #3DAA70;
+        --verde-cipitio-fondo: #2A7F50;
 }
 
-/* --------------------------------------------------------------------------
- *  2. ESTILOS BASE Y REGLAS GENERALES
- *  -------------------------------------------------------------------------- */
 html, body {
     overflow-x: hidden;
     max-width: 100%;
@@ -73,15 +39,11 @@ body.bg-fondo-oscuro {
     color: var(--blanco-sv);
 }
 
-/* --------------------------------------------------------------------------
- *  3. NAVEGACIÓN Y CABECERA (NAVBAR)
- *  -------------------------------------------------------------------------- */
 .bg-azul-nacional {
     background-color: var(--azul-oscuro) !important;
     border-bottom: 2px solid var(--azul-sv);
 }
 
-/* Control estricto del Isotipo / Favicon en Navbar */
 .icon-navbar {
     max-height: 35px !important;
     width: auto !important;
@@ -103,9 +65,6 @@ body.bg-fondo-oscuro {
     color: var(--celeste-brillante) !important;
 }
 
-/* --------------------------------------------------------------------------
- *  4. CLASES DE UTILIDAD Y COLORES
- *  -------------------------------------------------------------------------- */
 .text-blanco-sv {
     color: var(--blanco-sv) !important;
 }
@@ -118,19 +77,15 @@ body.bg-fondo-oscuro {
     border: 1px solid var(--azul-sv) !important;
 }
 
-/* --------------------------------------------------------------------------
- *  5. HERO SECTION Y LOGO PRINCIPAL
- *  -------------------------------------------------------------------------- */
 .hero-section {
     background: linear-gradient(to bottom, var(--azul-oscuro), var(--gris-oscuro));
 }
 
-/* Control estricto del Logo Ilustrado Centrado */
 .logo-hero {
     max-height: 120px !important;
     width: auto !important;
     display: inline-block;
-    filter: drop-shadow(0px 3px 8px rgba(0, 180, 216, 0.25)); /* Sombra resplandeciente cian */
+    filter: drop-shadow(0px 3px 8px rgba(0, 180, 216, 0.25));
     transition: transform 0.3s ease;
 }
 
@@ -138,9 +93,6 @@ body.bg-fondo-oscuro {
     transform: scale(1.02);
 }
 
-/* --------------------------------------------------------------------------
- *  6. BOTONES Y TARJETAS
- *  -------------------------------------------------------------------------- */
 .btn-explorar {
     background-color: var(--azul-sv);
     color: var(--blanco-sv);
@@ -165,9 +117,6 @@ body.bg-fondo-oscuro {
     box-shadow: 0 6px 15px rgba(0, 71, 171, 0.3) !important;
 }
 
-/* --------------------------------------------------------------------------
- *  7. BREADCRUMB (RASTRO DE MIGAJAS PARA SUBPÁGINAS)
- *  -------------------------------------------------------------------------- */
 .breadcrumb {
     background-color: rgba(0, 71, 171, 0.2);
     padding: 8px 15px;
@@ -188,9 +137,6 @@ body.bg-fondo-oscuro {
     text-decoration: underline;
 }
 
-/* --------------------------------------------------------------------------
- *  8. MEDIA QUERIES: LAPTOPS Y PANTALLAS COMPACTAS (720p / 768p)
- *  -------------------------------------------------------------------------- */
 @media (min-width: 992px) and (max-height: 800px) {
     .hero-section {
         padding-top: 5px !important;
@@ -210,9 +156,6 @@ body.bg-fondo-oscuro {
     }
 }
 
-/* --------------------------------------------------------------------------
- *  9. MEDIA QUERIES: DISPOSITIVOS MÓVILES (SMARTPHONES)
- *  -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
     .logo-hero {
         max-height: 110px !important;
@@ -240,10 +183,6 @@ body.bg-fondo-oscuro {
     }
 }
 
-/* ==========================================================================
-   CLASES DE UTILIDAD PARA LA PALETA EXTENDIDA
-   ========================================================================== */
-/* Textos */
 .text-cian-espectral {
     color: var(--cian-espectral) !important;
 }
@@ -256,13 +195,11 @@ body.bg-fondo-oscuro {
     color: var(--gris-ceniza-texto) !important;
 }
 
-/* Bootstrap define estos grises para fondo claro (sobre las tarjetas oscuras casi no se leen) */
 .text-secondary,
 .text-muted {
     color: var(--gris-ceniza-texto) !important;
 }
 
-/* Fondos */
 .bg-cafe-tierra {
     background-color: var(--cafe-tierra) !important;
 }
@@ -271,7 +208,6 @@ body.bg-fondo-oscuro {
     background-color: var(--gris-tarjeta) !important;
 }
 
-/* Bordes */
 .borde-verde-musgo {
     border: 1px solid var(--verde-musgo) !important;
 }
@@ -280,11 +216,6 @@ body.bg-fondo-oscuro {
     border: 1px solid var(--cian-espectral) !important;
 }
 
-/* ==========================================
-   ESTILOS JAVASCRIPT (INTERACTIVIDAD)
-   ========================================== */
-
-/* Efecto Linterna */
 #linterna-overlay {
     position: fixed;
     top: 0;
@@ -292,26 +223,21 @@ body.bg-fondo-oscuro {
     width: 100vw;
     height: 100vh;
     pointer-events: none;
-    /* Para que no bloquee los clics */
     z-index: 9999;
-    /* Gradiente que es transparente en el centro y oscuro a los bordes */
-    /* Opacidad ajustable: con 0.2 el texto sigue siendo legible fuera del círculo (subir a 0.15 para cumplir AA en todos los colores) */
     --linterna-opacidad: 0.2;
     background: radial-gradient(circle 250px at var(--x, 50vw) var(--y, 50vh), transparent 0%, rgba(10, 17, 40, var(--linterna-opacidad)) 100%);
     transition: opacity 0.3s ease;
 }
 
-/* Efecto desactivado por la persona usuaria (botón .linterna-toggle) */
 body.linterna-off #linterna-overlay {
     display: none;
 }
 
-/* Botón para activar/desactivar la linterna (solo se crea en dispositivos con mouse) */
 .linterna-toggle {
     position: fixed;
     left: 1rem;
     bottom: 1rem;
-    z-index: 10000; /* por encima del overlay */
+    z-index: 10000;
     width: 2.5rem;
     height: 2.5rem;
     display: flex;
@@ -330,7 +256,6 @@ body.linterna-off #linterna-overlay {
     color: var(--gris-oscuro);
 }
 
-/* Scroll Reveal */
 .reveal {
     opacity: 0;
     transform: translateY(40px);
@@ -340,25 +265,6 @@ body.linterna-off #linterna-overlay {
 .reveal.activo {
     opacity: 1;
     transform: translateY(0);
-}
-
-/* La imagen superior (Después) usa clip-path para cortarse */
-.img-after {
-    clip-path: polygon(0 0, 50% 0, 50% 100%, 0 100%);
-}
-
-/* Línea divisoria */
-.slider-line {
-    position: absolute;
-    top: 0;
-    bottom: 0;
-    left: 50%;
-    width: 4px;
-    background: var(--celeste-brillante);
-    pointer-events: none;
-    transform: translateX(-50%);
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-    z-index: 5;
 }
 
 .contenedor-filtros {
@@ -379,12 +285,8 @@ body.linterna-off #linterna-overlay {
     width: 300px;
 }
 
-/* ==========================================================================
-   SECCIÓN: RUTAS DE LEYENDAS
-   ========================================================================== */
 .text-lila-niebla {
     color: #9d8fe8 !important;
-    /* Variante clara de --lila-niebla para que se lea sobre fondo oscuro */
 }
 
 .bg-morado-brujo {
@@ -393,14 +295,13 @@ body.linterna-off #linterna-overlay {
 }
 
 .bg-verde-cipitio {
-    background-color: var(--verde-cipitio) !important;
+    background-color: var(--verde-cipitio-fondo) !important;
 }
 
 .borde-lila-niebla {
     border: 1px solid var(--lila-niebla) !important;
 }
 
-/* Cabecera con icono en lugar de foto */
 .cabecera-leyenda {
     height: 120px;
     display: flex;
@@ -423,7 +324,6 @@ body.linterna-off #linterna-overlay {
     background-color: var(--lila-niebla);
 }
 
-/* Línea de tiempo de la ruta sugerida */
 .ruta-leyendas {
     border-left: 2px solid var(--lila-niebla);
     margin-left: 10px;
@@ -450,7 +350,7 @@ body.linterna-off #linterna-overlay {
     display: inline-block;
     font-size: 0.8rem;
     font-weight: bold;
-    color: var(--verde-cipitio);
+    color: var(--verde-cipitio-texto);
     margin-bottom: 0.25rem;
 }
 
@@ -470,9 +370,6 @@ body.linterna-off #linterna-overlay {
     }
 }
 
-/* ==========================================================================
-   SECCIÓN: NOCHES (EVENTOS)
-   ========================================================================== */
 .text-amarillo-farol {
     color: var(--amarillo-farol) !important;
 }
@@ -497,7 +394,6 @@ body.linterna-off #linterna-overlay {
     border: 1px solid rgba(255, 215, 0, 0.45) !important;
 }
 
-/* Bloque "Próximo evento" con brillo de farol */
 .proximo-evento {
     background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.18) 0%, var(--azul-oscuro) 70%);
     border: 1px solid rgba(255, 215, 0, 0.45);
@@ -537,7 +433,6 @@ body.linterna-off #linterna-overlay {
     background-color: var(--amarillo-farol);
 }
 
-/* Eventos que ya pasaron se muestran atenuados */
 .evento-pasado .card {
     opacity: 0.5;
 }
@@ -545,4 +440,25 @@ body.linterna-off #linterna-overlay {
 .consejo-noche {
     background-color: var(--gris-tarjeta);
     border-left: 3px solid var(--amarillo-farol);
+}
+
+.bloque-destacado {
+    background: radial-gradient(circle at 50% 0%, rgba(0, 180, 216, 0.18) 0%, var(--azul-oscuro) 70%);
+    border: 1px solid rgba(0, 180, 216, 0.45);
+    box-shadow: 0 0 25px rgba(0, 180, 216, 0.12);
+}
+
+.icono-beneficio {
+    font-size: 2rem;
+    color: var(--cian-espectral);
+}
+
+details.faq-item {
+    border-bottom: 1px solid rgba(0, 71, 171, 0.5);
+    padding: 0.75rem 0;
+}
+
+details.faq-item summary {
+    cursor: pointer;
+    font-weight: 600;
 }

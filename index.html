@@ -2,7 +2,6 @@
 <html lang="es">
 
 <head>
-  <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WVJFFEN09"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
@@ -28,7 +27,6 @@
   <meta name="robots" content="index, follow" />
   <link rel="canonical" href="https://rutamisteriosv.netlify.app/" />
 
-  <!-- Open Graph / Facebook / WhatsApp -->
   <meta property="og:site_name" content="RutaMisterioSV" />
   <meta property="og:locale" content="es_SV" />
   <meta property="og:title" content="RutaMisterioSV - El Salvador Oculto | PPI115" />
@@ -38,7 +36,6 @@
   <meta property="og:image" content="https://rutamisteriosv.netlify.app/img/logo.png" />
   <meta property="og:image:alt" content="Logotipo principal de RutaMisterioSV con un volcán y una luna" />
 
-  <!-- Twitter Cards -->
   <meta name="twitter:card" content="summary_large_image" />
   <meta name="twitter:url" content="https://rutamisteriosv.netlify.app/" />
   <meta name="twitter:image" content="https://rutamisteriosv.netlify.app/img/logo.png" />
@@ -46,7 +43,6 @@
   <meta name="twitter:title" content="RutaMisterioSV - Turismo de Misterio" />
   <meta name="twitter:description" content="Descubre lo que la noche esconde en El Salvador." />
 
-  <!-- Datos Estructurados (Schema.org) para posicionamiento rápido en Google -->
   <script type="application/ld+json">
   {
     "@context": "https://schema.org",
@@ -69,6 +65,8 @@
         "@type": "Organization",
         "@id": "https://rutamisteriosv.netlify.app/#organization",
         "name": "RutaMisterioSV",
+        "email": "CORREO_REAL",
+        "contactPoint": { "@type": "ContactPoint", "contactType": "customer support", "email": "CORREO_REAL", "availableLanguage": "es" },
         "url": "https://rutamisteriosv.netlify.app/",
         "logo": "https://rutamisteriosv.netlify.app/img/logo.png",
         "sameAs": [
@@ -110,8 +108,9 @@
             <a class="nav-link py-1" href="secciones/relatos.html">Relatos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link py-1" href="secciones/eventos.html">Eventos</a>
+            <a class="nav-link py-1" href="secciones/eventos.html">Eventos Nocturnos</a>
           </li>
+          <li class="nav-item"><a class="nav-link py-1" href="secciones/contacto.html">Contacto</a></li>
         </ul>
       </div>
     </div>
@@ -120,7 +119,7 @@
   <header class="hero-section text-center py-5">
     <div class="container reveal">
       <img src="img/logo.png" alt="RutaMisterioSV Logo Principal" class="logo-hero img-fluid mb-3"
-        decoding="async" style="max-height: 200px; width: auto; object-fit: contain;">
+        decoding="async" style="max-height: 200px; width: auto; object-fit: contain;" width="1850" height="530">
       <h1 class="display-5 fw-bold text-cian-espectral text-uppercase">
         RutaMisterioSV: turismo de misterio en El Salvador
       </h1>
@@ -200,18 +199,27 @@
         <div class="card bg-gris-tarjeta borde-cian-espectral h-100 text-light p-3 shadow-sm">
           <div class="card-body d-flex flex-column text-center text-lg-start">
             <h2 class="card-title text-cian-espectral fw-bold fs-5 mb-3">
-              Noches (Eventos)
+              Eventos Nocturnos
             </h2>
             <p class="card-text text-gris-ceniza small mb-4 flex-grow-1">
               Únete a nuestros recorridos nocturnos guiados por expertos en
               historia y misterio.
             </p>
             <a href="secciones/eventos.html" class="btn btn-explorar w-100 mt-auto"
-              aria-label="Explorar la sección de Noches y Eventos">Explorar</a>
+              aria-label="Explorar la sección de Eventos Nocturnos">Explorar</a>
           </div>
         </div>
       </div>
     </div>
+
+    <section class="bloque-destacado rounded p-4 mt-5 text-center reveal" aria-labelledby="titulo-boletin">
+      <h2 id="titulo-boletin" class="h3 text-cian-espectral fw-bold mb-2">Recibe las novedades en tu correo</h2>
+      <p class="text-gris-ceniza mb-3">
+        Suscríbete al boletín mensual de RutaMisterioSV y entérate de nuevos lugares abandonados, leyendas
+        salvadoreñas y eventos nocturnos.
+      </p>
+      <a href="secciones/boletin.html" class="btn btn-explorar px-4">Quiero suscribirme</a>
+    </section>
   </main>
 
   <footer class="bg-azul-nacional text-center py-3 mt-auto">
@@ -236,6 +244,11 @@
           rel="noopener noreferrer" aria-label="X">
           <i class="bi bi-twitter-x" aria-hidden="true"></i>
         </a>
+      </nav>
+      <nav class="mb-2 small" aria-label="Enlaces del sitio">
+          <a class="text-cian-espectral" href="secciones/boletin.html">Boletín</a>
+          <span aria-hidden="true">·</span>
+          <a class="text-cian-espectral" href="secciones/contacto.html">Contacto</a>
       </nav>
       <p class="mb-0 text-white small">
         &copy; 2026 RutaMisterioSV - Practica Evaluada 1 - PPI115 Universidad de El

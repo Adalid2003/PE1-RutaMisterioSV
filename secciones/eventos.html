@@ -4,9 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PPI115 - 2026 - RutaMisterioSV | Noches (Eventos)</title>
+    <title>PPI115 - 2026 - RutaMisterioSV | Eventos Nocturnos</title>
 
-    <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-8WVJFFEN09"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -25,16 +24,17 @@
     <meta property="og:site_name" content="RutaMisterioSV">
     <meta property="og:locale" content="es_SV">
     <meta property="og:url" content="https://rutamisteriosv.netlify.app/secciones/eventos.html">
-    <meta property="og:title" content="RutaMisterioSV | Noches de Misterio">
+    <meta property="og:title" content="RutaMisterioSV | Eventos Nocturnos">
     <meta property="og:description" content="Fiestas de Halloween, necrotours, carreras nocturnas y teatro de terror. Descubre qué hacer cuando cae la noche en El Salvador.">
     <meta property="og:image" content="https://rutamisteriosv.netlify.app/img/logo.png">
     <meta property="og:image:alt" content="Logotipo de RutaMisterioSV con un volcán y una luna">
 
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://rutamisteriosv.netlify.app/secciones/eventos.html">
-    <meta name="twitter:title" content="RutaMisterioSV | Noches de Misterio">
+    <meta name="twitter:title" content="RutaMisterioSV | Eventos Nocturnos">
     <meta name="twitter:description" content="Agenda de eventos nocturnos de misterio y Halloween en El Salvador.">
     <meta name="twitter:image" content="https://rutamisteriosv.netlify.app/img/logo.png">
+    <meta name="twitter:image:alt" content="Logotipo principal de RutaMisterioSV con un volcán y una luna" />
 
     <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon.png">
     <link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png">
@@ -51,7 +51,7 @@
           "@type": "BreadcrumbList",
           "itemListElement": [
             { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rutamisteriosv.netlify.app/" },
-            { "@type": "ListItem", "position": 2, "name": "Noches (Eventos)", "item": "https://rutamisteriosv.netlify.app/secciones/eventos.html" }
+            { "@type": "ListItem", "position": 2, "name": "Eventos Nocturnos", "item": "https://rutamisteriosv.netlify.app/secciones/eventos.html" }
           ]
         },
         {
@@ -167,7 +167,8 @@
                     <li class="nav-item"><a class="nav-link py-1" href="lugares_abandonados.html">Lugares Abandonados</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="rutas_leyendas.html">Leyendas</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="relatos.html">Relatos</a></li>
-                    <li class="nav-item"><a class="nav-link active py-1 text-amarillo-farol" aria-current="page" href="eventos.html">Eventos</a></li>
+                    <li class="nav-item"><a class="nav-link active py-1 text-amarillo-farol" aria-current="page" href="eventos.html">Eventos Nocturnos</a></li>
+                    <li class="nav-item"><a class="nav-link py-1" href="contacto.html">Contacto</a></li>
                 </ul>
             </div>
         </div>
@@ -177,7 +178,7 @@
         <nav aria-label="Ruta de navegación">
             <ol class="breadcrumb bg-gris-tarjeta borde-amarillo-farol p-2 rounded">
                 <li class="breadcrumb-item"><a href="../index.html" class="text-cian-espectral">Inicio</a></li>
-                <li class="breadcrumb-item active text-amarillo-farol" aria-current="page">Noches (Eventos)</li>
+                <li class="breadcrumb-item active text-amarillo-farol" aria-current="page">Eventos Nocturnos</li>
             </ol>
         </nav>
     </div>
@@ -188,7 +189,6 @@
         <p class="lead text-plata-luna mb-4">Cuando cae la noche, El Salvador se llena de fiestas, recorridos y
             experiencias que ponen a prueba tu valor. Descubre los eventos que aguardan por ti.</p>
 
-        <!-- ===================== PRÓXIMO EVENTO (cuenta regresiva) ===================== -->
         <section id="proximo-evento" class="proximo-evento rounded p-4 mb-5 text-center d-none" aria-live="polite">
             <p class="text-uppercase small fw-bold text-amarillo-farol mb-1"><i class="bi bi-hourglass-split"></i> Próximo evento</p>
             <h2 id="proximo-nombre" class="fw-bold mb-1"></h2>
@@ -201,7 +201,6 @@
             </div>
         </section>
 
-        <!-- ===================== FILTROS ===================== -->
         <div class="contenedor-filtros">
             <select id="filtro-categoria" class="select-filtro" aria-label="Filtrar por tipo de evento">
                 <option value="todos">Todos los tipos</option>
@@ -221,8 +220,6 @@
             </select>
         </div>
 
-        <!-- ===================== TARJETAS DE EVENTOS ===================== -->
-        <!-- Fechas, lugares y precios de referencia: actualizar con los datos oficiales de cada evento. -->
         <div id="lista-eventos" class="row g-4 mb-3">
 
             <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="fiesta" data-departamento="san-salvador"
@@ -439,7 +436,6 @@
         <p class="small text-gris-ceniza text-center mt-4 mb-5"><i class="bi bi-info-circle"></i> Fechas, lugares y
             precios de referencia. Confirma con cada organizador antes de asistir.</p>
 
-        <!-- ===================== RECOMENDACIONES ===================== -->
         <section aria-labelledby="titulo-consejos">
             <h2 id="titulo-consejos" class="text-amarillo-farol fw-bold mb-3"><i class="bi bi-lightbulb"></i> Antes de salir de noche</h2>
             <div class="row g-3">
@@ -491,6 +487,11 @@
                 <a class="text-cian-espectral text-decoration-none mx-2" href="https://x.com/rutamisterio_sv" target="_blank" rel="noopener noreferrer" aria-label="X">
                     <i class="bi bi-twitter-x" aria-hidden="true"></i>
                 </a>
+            </nav>
+            <nav class="mb-2 small" aria-label="Enlaces del sitio">
+                <a class="text-cian-espectral" href="boletin.html">Boletín</a>
+                <span aria-hidden="true">·</span>
+                <a class="text-cian-espectral" href="contacto.html">Contacto</a>
             </nav>
             <p class="mb-0 text-white small">
                 &copy; 2026 RutaMisterioSV - Practica Evaluada 1 - PPI115 Universidad de El

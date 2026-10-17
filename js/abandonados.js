@@ -16,16 +16,14 @@ document.addEventListener("DOMContentLoaded", function() {
             const coincideTexto = titulo.includes(textoBusqueda);
             const coincideUbicacion = (ubicacionSeleccionada === 'todos') || (ubicacionTarjeta === ubicacionSeleccionada);
 
-            // Ocultar o mostrar según los filtros
             if (coincideTexto && coincideUbicacion) {
-                tarjeta.style.display = ''; // Vuelve al display original (block/flex)
+                tarjeta.style.display = '';
             } else {
-                tarjeta.style.display = 'none'; // Oculta la tarjeta
+                tarjeta.style.display = 'none';
             }
         });
     }
 
-    // Ejecutar la función cada vez que el usuario escriba o cambie el select
     buscador.addEventListener('input', filtrarLugares);
     filtroUbicacion.addEventListener('change', filtrarLugares);
     

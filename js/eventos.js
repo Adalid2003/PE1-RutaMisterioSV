@@ -4,19 +4,16 @@ document.addEventListener("DOMContentLoaded", function() {
     const filtroCategoria = document.getElementById('filtro-categoria');
     const filtroDepartamento = document.getElementById('filtro-departamento');
     const sinEventos = document.getElementById('sin-eventos');
-    const DURACION_HORAS = 4; // Duración aproximada de cada evento
+    const DURACION_HORAS = 4;
 
-    // Ordena las tarjetas por fecha (el más cercano primero)
     const tarjetas = Array.from(document.querySelectorAll('.tarjeta-evento'))
         .sort((a, b) => new Date(a.dataset.inicio) - new Date(b.dataset.inicio));
     tarjetas.forEach(tarjeta => lista.appendChild(tarjeta));
 
-    // Formato de fecha que pide Google Calendar: 20261030T020000Z
     function formatoCalendario(fecha) {
         return fecha.toISOString().replace(/[-:]/g, '').replace(/\.\d{3}/, '');
     }
 
-    // Etiqueta de estado y enlace a Google Calendar de cada tarjeta
     function prepararTarjetas() {
         const ahora = new Date();
 
@@ -77,7 +74,6 @@ document.addEventListener("DOMContentLoaded", function() {
         sinEventos.classList.toggle('d-none', visibles > 0);
     }
 
-    // Cuenta regresiva hacia el siguiente evento que aún no comienza
     function iniciarCuentaRegresiva() {
         const proximo = tarjetas.find(t => new Date(t.dataset.inicio) > new Date());
         if (!proximo) return;
@@ -107,7 +103,7 @@ document.addEventListener("DOMContentLoaded", function() {
             if (restante === 0) {
                 clearInterval(intervalo);
                 prepararTarjetas();
-                iniciarCuentaRegresiva(); // Pasa al siguiente evento
+                iniciarCuentaRegresiva();
             }
         }
 
