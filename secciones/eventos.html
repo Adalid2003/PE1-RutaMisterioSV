@@ -5,110 +5,501 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPI115 - 2026 - RutaMisterioSV | Noches (Eventos)</title>
-    <meta name="description" content="Eventos y recorridos nocturnos de misterio en El Salvador.">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <meta name="description" content="Agenda de eventos nocturnos de misterio en El Salvador: fiestas de Halloween, necrotours, carreras nocturnas, escape rooms y teatro de terror.">
+    <meta name="keywords" content="eventos Halloween El Salvador, eventos nocturnos San Salvador, necrotour Cementerio de Los Ilustres, teatro de terror El Salvador, escape room San Salvador">
+    <meta name="author" content="Equipo de Desarrollo PPI115">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rutamisteriosv.netlify.app/secciones/eventos.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RutaMisterioSV">
+    <meta property="og:locale" content="es_SV">
+    <meta property="og:url" content="https://rutamisteriosv.netlify.app/secciones/eventos.html">
+    <meta property="og:title" content="RutaMisterioSV | Noches de Misterio">
+    <meta property="og:description" content="Fiestas de Halloween, necrotours, carreras nocturnas y teatro de terror. Descubre qué hacer cuando cae la noche en El Salvador.">
+    <meta property="og:image" content="https://rutamisteriosv.netlify.app/img/logo.png">
+    <meta property="og:image:alt" content="Logotipo de RutaMisterioSV con un volcán y una luna">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rutamisteriosv.netlify.app/secciones/eventos.html">
+    <meta name="twitter:title" content="RutaMisterioSV | Noches de Misterio">
+    <meta name="twitter:description" content="Agenda de eventos nocturnos de misterio y Halloween en El Salvador.">
+    <meta name="twitter:image" content="https://rutamisteriosv.netlify.app/img/logo.png">
+
     <link rel="icon" href="../img/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/website.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rutamisteriosv.netlify.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Noches (Eventos)", "item": "https://rutamisteriosv.netlify.app/secciones/eventos.html" }
+          ]
+        },
+        {
+          "@type": "Event",
+          "name": "Paranormal Mansion",
+          "startDate": "2026-10-30T20:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Celebración de Halloween con música y una estética inspirada en lo paranormal.",
+          "location": { "@type": "Place", "name": "San Salvador", "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "15", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "Ska-lloween",
+          "startDate": "2026-10-31T19:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Halloween con música ska en vivo entre monstruos y sombras.",
+          "location": { "@type": "Place", "name": "San Salvador", "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "The Final Purge: Monster Edition",
+          "startDate": "2026-10-31T21:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Fiesta temática de Halloween donde las criaturas salen de sus escondites.",
+          "location": { "@type": "Place", "name": "Antiguo Cuscatlán", "address": { "@type": "PostalAddress", "addressLocality": "Antiguo Cuscatlán", "addressRegion": "La Libertad", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "20", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "Spooky Season",
+          "startDate": "2026-10-24T19:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Noche de Halloween, humor e historias escalofriantes para compartir con amigos.",
+          "location": { "@type": "Place", "name": "Santa Tecla", "address": { "@type": "PostalAddress", "addressLocality": "Santa Tecla", "addressRegion": "La Libertad", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "8", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "Carrera ¿Quién dijo miedo?",
+          "startDate": "2026-10-25T18:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Carrera nocturna con disfraces y desafíos.",
+          "location": { "@type": "Place", "name": "San Salvador", "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "25", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "TEYO Horror Night",
+          "startDate": "2026-10-31T20:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Noche temática de terror y disfraces en el oriente salvadoreño.",
+          "location": { "@type": "Place", "name": "San Miguel", "address": { "@type": "PostalAddress", "addressLocality": "San Miguel", "addressRegion": "San Miguel", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "12", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "Necrotours en el Cementerio de Los Ilustres",
+          "startDate": "2026-11-01T18:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Recorrido nocturno entre mausoleos y esculturas históricas.",
+          "location": { "@type": "Place", "name": "Cementerio de Los Ilustres", "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "5", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "Escape Room: el enigma de la habitación oscura",
+          "startDate": "2026-11-07T17:00:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Resuelve el misterio de una sala de terror antes de que se agote el tiempo.",
+          "location": { "@type": "Place", "name": "San Salvador", "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "15", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        },
+        {
+          "@type": "Event",
+          "name": "Noches de teatro de terror",
+          "startDate": "2026-11-14T19:30:00-06:00",
+          "eventStatus": "https://schema.org/EventScheduled",
+          "eventAttendanceMode": "https://schema.org/OfflineEventAttendanceMode",
+          "description": "Obras de suspenso y relatos que juegan con tus propios temores.",
+          "location": { "@type": "Place", "name": "San Salvador", "address": { "@type": "PostalAddress", "addressLocality": "San Salvador", "addressCountry": "SV" } },
+          "offers": { "@type": "Offer", "price": "10", "priceCurrency": "USD", "availability": "https://schema.org/InStock" }
+        }
+      ]
+    }
+    </script>
 </head>
 
 <body class="bg-fondo-oscuro text-light d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-nacional py-1">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-nacional py-1" aria-label="Navegación principal">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 py-0" href="../index.html">
-                <img src="../img/favicon.png" class="icon-navbar img-fluid" style="max-height: 35px; width: auto;">
+                <img src="../img/favicon.png" class="icon-navbar img-fluid" alt="Isotipo de RutaMisterioSV">
                 <span class="fw-bold fs-6 text-blanco-sv">RutaMisterioSV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link py-1" href="../index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link py-1" href="lugares_abandonados.html">Lugares
-                            Abandonados</a></li>
+                    <li class="nav-item"><a class="nav-link py-1" href="lugares_abandonados.html">Lugares Abandonados</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="rutas_leyendas.html">Leyendas</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="relatos.html">Relatos</a></li>
-                    <li class="nav-item"><a class="nav-link active py-1" href="eventos.html">Noches</a></li>
+                    <li class="nav-item"><a class="nav-link active py-1 text-amarillo-farol" aria-current="page" href="eventos.html">Noches</a></li>
                 </ul>
             </div>
         </div>
     </nav>
 
     <div class="container mt-4">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-                <li class="breadcrumb-item active text-blanco-sv" aria-current="page">Noches (Eventos)</li>
+        <nav aria-label="Ruta de navegación">
+            <ol class="breadcrumb bg-gris-tarjeta borde-amarillo-farol p-2 rounded">
+                <li class="breadcrumb-item"><a href="../index.html" class="text-cian-espectral">Inicio</a></li>
+                <li class="breadcrumb-item active text-amarillo-farol" aria-current="page">Noches (Eventos)</li>
             </ol>
         </nav>
     </div>
 
-    <main class="container my-4">
-        <h1 class="text-info fw-bold mb-3">Eventos Nocturnos</h1>
-        <p class="lead">Descubre los misteriosos eventos que aguardan por tu.</p>
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Paranormal Mansion</h3>
-            <p>Una mansión, una noche y una atmósfera fuera de lo normal. Vive una celebración de Halloween entre
-                música, oscuridad y una estética inspirada en lo paranormal.</p>
+    <main class="container my-4 reveal">
+
+        <h1 class="text-amarillo-farol fw-bold mb-3">Eventos Nocturnos</h1>
+        <p class="lead text-plata-luna mb-4">Cuando cae la noche, El Salvador se llena de fiestas, recorridos y
+            experiencias que ponen a prueba tu valor. Descubre los eventos que aguardan por ti.</p>
+
+        <!-- ===================== PRÓXIMO EVENTO (cuenta regresiva) ===================== -->
+        <section id="proximo-evento" class="proximo-evento rounded p-4 mb-5 text-center d-none" aria-live="polite">
+            <p class="text-uppercase small fw-bold text-amarillo-farol mb-1"><i class="bi bi-hourglass-split"></i> Próximo evento</p>
+            <h2 id="proximo-nombre" class="fw-bold mb-1"></h2>
+            <p id="proximo-detalle" class="text-plata-luna mb-3"></p>
+            <div class="d-flex justify-content-center gap-3 flex-wrap" role="timer">
+                <div class="contador-bloque"><span id="cd-dias">0</span><small>días</small></div>
+                <div class="contador-bloque"><span id="cd-horas">0</span><small>horas</small></div>
+                <div class="contador-bloque"><span id="cd-minutos">0</span><small>min</small></div>
+                <div class="contador-bloque"><span id="cd-segundos">0</span><small>seg</small></div>
+            </div>
+        </section>
+
+        <!-- ===================== FILTROS ===================== -->
+        <div class="contenedor-filtros">
+            <select id="filtro-categoria" class="select-filtro" aria-label="Filtrar por tipo de evento">
+                <option value="todos">Todos los tipos</option>
+                <option value="fiesta">Fiestas</option>
+                <option value="concierto">Conciertos</option>
+                <option value="recorrido">Recorridos</option>
+                <option value="carrera">Carreras</option>
+                <option value="experiencia">Experiencias</option>
+                <option value="teatro">Teatro</option>
+            </select>
+
+            <select id="filtro-departamento" class="select-filtro" aria-label="Filtrar por departamento">
+                <option value="todos">Cualquier departamento</option>
+                <option value="san-salvador">San Salvador</option>
+                <option value="la-libertad">La Libertad</option>
+                <option value="san-miguel">San Miguel</option>
+            </select>
         </div>
 
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Ska-lloween</h3>
-            <p>Una noche para bailar entre monstruos, sombras y ritmos contagiosos. Celebra Halloween con música en vivo
-                y una atmósfera donde el terror se convierte en fiesta.</p>
+        <!-- ===================== TARJETAS DE EVENTOS ===================== -->
+        <!-- Fechas, lugares y precios de referencia: actualizar con los datos oficiales de cada evento. -->
+        <div id="lista-eventos" class="row g-4 mb-3">
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="fiesta" data-departamento="san-salvador"
+                data-inicio="2026-10-30T20:00:00-06:00" data-lugar="San Salvador">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Fiesta</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Paranormal Mansion</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Viernes 30 de octubre · 8:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Salvador</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $15.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Una mansión, una noche y una atmósfera fuera de lo
+                            normal. Vive una celebración de Halloween entre música, oscuridad y una estética inspirada en lo
+                            paranormal.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="concierto" data-departamento="san-salvador"
+                data-inicio="2026-10-31T19:00:00-06:00" data-lugar="San Salvador">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Concierto</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Ska-lloween</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Sábado 31 de octubre · 7:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Salvador</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $10.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Una noche para bailar entre monstruos, sombras y
+                            ritmos contagiosos. Celebra Halloween con música en vivo y una atmósfera donde el terror se
+                            convierte en fiesta.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="fiesta" data-departamento="la-libertad"
+                data-inicio="2026-10-31T21:00:00-06:00" data-lugar="Antiguo Cuscatlán, La Libertad">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Fiesta</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">The Final Purge: Monster Edition</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Sábado 31 de octubre · 9:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> Antiguo Cuscatlán, La Libertad</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $20.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Las criaturas salen de sus escondites y la noche se
+                            convierte en territorio de monstruos. Prepárate para una fiesta temática de Halloween donde cada
+                            disfraz esconde una historia.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="fiesta" data-departamento="la-libertad"
+                data-inicio="2026-10-24T19:00:00-06:00" data-lugar="Santa Tecla, La Libertad">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Fiesta</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Spooky Season</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Sábado 24 de octubre · 7:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> Santa Tecla, La Libertad</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $8.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Una noche para quienes disfrutan las historias
+                            escalofriantes sin renunciar a la diversión. Halloween, humor y un ambiente ideal para compartir
+                            con amigos.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="carrera" data-departamento="san-salvador"
+                data-inicio="2026-10-25T18:00:00-06:00" data-lugar="San Salvador">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Carrera</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Carrera ¿Quién dijo miedo?</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Domingo 25 de octubre · 6:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Salvador</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $25.00 (incluye kit)</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Corre cuando cae el sol y demuestra que el miedo no
+                            puede detenerte. Una aventura nocturna con disfraces, desafíos y energía para quienes prefieren
+                            vivir Halloween en movimiento.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="fiesta" data-departamento="san-miguel"
+                data-inicio="2026-10-31T20:00:00-06:00" data-lugar="San Miguel">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Fiesta</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">TEYO Horror Night</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Sábado 31 de octubre · 8:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Miguel</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $12.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">El oriente salvadoreño también tiene una cita con la
+                            oscuridad. Sumérgete en una noche temática de terror, disfraces y diversión, donde el misterio es
+                            el protagonista.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="recorrido" data-departamento="san-salvador"
+                data-inicio="2026-11-01T18:00:00-06:00" data-lugar="Cementerio de Los Ilustres, San Salvador">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Recorrido</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Necrotours en el Cementerio de Los Ilustres</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Domingo 1 de noviembre · 6:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> Cementerio de Los Ilustres, San Salvador</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $5.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Camina entre mausoleos monumentales y esculturas que
+                            parecen observar cada movimiento. Descubre las historias de personajes del pasado en un recorrido
+                            donde la memoria y el misterio se encuentran.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="experiencia" data-departamento="san-salvador"
+                data-inicio="2026-11-07T17:00:00-06:00" data-lugar="San Salvador">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Experiencia</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Escape Room: el enigma de la habitación oscura</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Sábado 7 de noviembre · 5:00 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Salvador</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $15.00 por persona</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Una puerta cerrada, pistas ocultas y un reloj que no
+                            deja de avanzar. Pon a prueba tu ingenio para resolver el misterio antes de que se agote el
+                            tiempo. Consulta la disponibilidad de salas con temática de terror.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-evento" data-categoria="teatro" data-departamento="san-salvador"
+                data-inicio="2026-11-14T19:30:00-06:00" data-lugar="San Salvador">
+                <article class="card h-100 bg-gris-tarjeta borde-amarillo-farol text-light shadow">
+                    <div class="card-body d-flex flex-column">
+                        <div class="d-flex justify-content-between align-items-start mb-2">
+                            <span class="badge bg-morado-brujo">Teatro</span>
+                            <span class="estado-evento badge"></span>
+                        </div>
+                        <h3 class="card-title text-amarillo-farol fs-4">Noches de teatro de terror</h3>
+                        <ul class="list-unstyled small text-plata-luna mb-3">
+                            <li><i class="bi bi-calendar-event"></i> Sábado 14 de noviembre · 7:30 p. m.</li>
+                            <li><i class="bi bi-geo-alt-fill"></i> San Salvador</li>
+                            <li><i class="bi bi-ticket-perforated"></i> $10.00</li>
+                        </ul>
+                        <p class="card-text text-gris-ceniza flex-grow-1">Luces tenues, personajes inquietantes y relatos que
+                            juegan con tus propios temores. Déjate atrapar por el suspenso y vive el terror desde la
+                            comodidad de una butaca.</p>
+                        <a class="btn btn-sm btn-outline-farol btn-calendario mt-auto" target="_blank" rel="noopener noreferrer">
+                            <i class="bi bi-calendar-plus"></i> Agregar a mi calendario</a>
+                    </div>
+                </article>
+            </div>
         </div>
 
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>The Final Purge: Monster Edition</h3>
-            <p>Las criaturas salen de sus escondites y la noche se convierte en territorio de monstruos. Prepárate para
-                una fiesta temática de Halloween donde cada disfraz esconde una historia.</p>
-        </div>
+        <p id="sin-eventos" class="text-center text-gris-ceniza d-none">No hay eventos con esos filtros... por ahora la
+            noche está tranquila.</p>
 
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Spooky Season</h3>
-            <p>Una noche para quienes disfrutan las historias escalofriantes sin renunciar a la diversión. Halloween,
-                humor y un ambiente ideal para compartir con amigos.</p>
-        </div>
+        <p class="small text-gris-ceniza text-center mt-4 mb-5"><i class="bi bi-info-circle"></i> Fechas, lugares y
+            precios de referencia. Confirma con cada organizador antes de asistir.</p>
 
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Carrera ¿Quién dijo miedo?</h3>
-            <p>Corre cuando cae el sol y demuestra que el miedo no puede detenerte. Una aventura nocturna con disfraces,
-                desafíos y energía para quienes prefieren vivir Halloween en movimiento.</p>
-        </div>
-
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>TEYO Horror Night</h3>
-            <p>El oriente salvadoreño también tiene una cita con la oscuridad. Sumérgete en una noche temática de
-                terror, disfraces y diversión, donde el misterio es el protagonista.</p>
-        </div>
-
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Necrotours en el Cementerio de Los Ilustres</h3>
-            <p>Camina entre mausoleos monumentales y esculturas que parecen observar cada movimiento. Descubre las
-                historias de personajes del pasado en un recorrido donde la memoria y el misterio se encuentran.</p>
-        </div>
-
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Escape Room: el enigma de la habitación oscura</h3>
-            <p>Una puerta cerrada, pistas ocultas y un reloj que no deja de avanzar. Pon a prueba tu ingenio para
-                resolver el misterio antes de que se agote el tiempo. Consulta la disponibilidad de salas con temática
-                de terror.</p>
-        </div>
-
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Noches de teatro de terror</h3>
-            <p>Luces tenues, personajes inquietantes y relatos que juegan con tus propios temores. Déjate atrapar por el
-                suspenso y vive el terror desde la comodidad de una butaca.</p>
-        </div>
+        <!-- ===================== RECOMENDACIONES ===================== -->
+        <section aria-labelledby="titulo-consejos">
+            <h2 id="titulo-consejos" class="text-amarillo-farol fw-bold mb-3"><i class="bi bi-lightbulb"></i> Antes de salir de noche</h2>
+            <div class="row g-3">
+                <div class="col-sm-6 col-lg-3">
+                    <div class="consejo-noche h-100 p-3 rounded">
+                        <i class="bi bi-people-fill fs-3 text-amarillo-farol"></i>
+                        <h3 class="fs-6 fw-bold mt-2">Ve acompañado</h3>
+                        <p class="small text-gris-ceniza mb-0">Comparte tu ubicación con alguien de confianza.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="consejo-noche h-100 p-3 rounded">
+                        <i class="bi bi-car-front-fill fs-3 text-amarillo-farol"></i>
+                        <h3 class="fs-6 fw-bold mt-2">Planifica tu regreso</h3>
+                        <p class="small text-gris-ceniza mb-0">Ten listo tu transporte antes de que termine el evento.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="consejo-noche h-100 p-3 rounded">
+                        <i class="bi bi-flashlight fs-3 text-amarillo-farol"></i>
+                        <h3 class="fs-6 fw-bold mt-2">Lleva linterna</h3>
+                        <p class="small text-gris-ceniza mb-0">Indispensable en recorridos y lugares poco iluminados.</p>
+                    </div>
+                </div>
+                <div class="col-sm-6 col-lg-3">
+                    <div class="consejo-noche h-100 p-3 rounded">
+                        <i class="bi bi-ticket-detailed-fill fs-3 text-amarillo-farol"></i>
+                        <h3 class="fs-6 fw-bold mt-2">Compra en canales oficiales</h3>
+                        <p class="small text-gris-ceniza mb-0">Evita revendedores y confirma el evento con el organizador.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
     </main>
 
-
-    <footer class="bg-azul-nacional text-center py-2 mt-auto">
+    <footer class="bg-azul-nacional text-center py-3 mt-auto">
         <div class="container">
-            <p class="mb-0 text-white small">&copy; 2026 RutaMisterioSV - Proyecto PPI115 UES.</p>
+            <h5>Nuestras redes sociales</h5>
+            <nav class="mb-2" aria-label="Redes sociales">
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://www.facebook.com/profile.php?id=61595268217591" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://www.youtube.com/channel/UCs2xzsmyIChfH1NoHp3rJ5Q" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="bi bi-youtube" aria-hidden="true"></i>
+                </a>
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://www.instagram.com/rutamisteriosv/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://x.com/rutamisterio_sv" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+            </nav>
+            <p class="mb-0 text-white small">
+                &copy; 2026 RutaMisterioSV - Practica Evaluada 1 - PPI115 Universidad de El
+                Salvador.
+            </p>
         </div>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/eventos.js"></script>
 </body>
 
 </html>

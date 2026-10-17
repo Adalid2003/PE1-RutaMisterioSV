@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://rutamisteriosv.netlify.app/sitemap.xml

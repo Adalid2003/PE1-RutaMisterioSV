@@ -367,3 +367,171 @@ body.bg-fondo-oscuro {
 .input-busqueda {
     width: 300px;
 }
+
+/* ==========================================================================
+   SECCIÓN: RUTAS DE LEYENDAS
+   ========================================================================== */
+.text-lila-niebla {
+    color: #9d8fe8 !important;
+    /* Variante clara de --lila-niebla para que se lea sobre fondo oscuro */
+}
+
+.bg-morado-brujo {
+    background-color: var(--morado-brujo) !important;
+    border: 1px solid var(--lila-niebla);
+}
+
+.bg-verde-cipitio {
+    background-color: var(--verde-cipitio) !important;
+}
+
+.borde-lila-niebla {
+    border: 1px solid var(--lila-niebla) !important;
+}
+
+/* Cabecera con icono en lugar de foto */
+.cabecera-leyenda {
+    height: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3rem;
+    color: #c9c0ff;
+    background: radial-gradient(circle at 50% 120%, var(--lila-niebla) 0%, var(--morado-brujo) 55%, var(--azul-oscuro) 100%);
+}
+
+.btn-outline-leyenda {
+    color: #c9c0ff;
+    border: 1px solid var(--lila-niebla);
+    width: fit-content;
+}
+
+.btn-outline-leyenda:hover,
+.btn-outline-leyenda:focus {
+    color: var(--blanco-sv);
+    background-color: var(--lila-niebla);
+}
+
+/* Línea de tiempo de la ruta sugerida */
+.ruta-leyendas {
+    border-left: 2px solid var(--lila-niebla);
+    margin-left: 10px;
+}
+
+.ruta-leyendas li {
+    position: relative;
+    padding: 0 0 1.5rem 1.5rem;
+}
+
+.ruta-leyendas li::before {
+    content: "";
+    position: absolute;
+    left: -8px;
+    top: 4px;
+    width: 14px;
+    height: 14px;
+    border-radius: 50%;
+    background-color: var(--morado-brujo);
+    border: 2px solid var(--lila-niebla);
+}
+
+.ruta-hora {
+    display: inline-block;
+    font-size: 0.8rem;
+    font-weight: bold;
+    color: var(--verde-cipitio);
+    margin-bottom: 0.25rem;
+}
+
+.alert-leyenda {
+    background-color: var(--morado-brujo);
+    color: var(--blanco-sv);
+    border: 1px solid var(--lila-niebla);
+}
+
+@media (max-width: 576px) {
+    .contenedor-filtros {
+        flex-direction: column;
+    }
+
+    .input-busqueda {
+        width: 100%;
+    }
+}
+
+/* ==========================================================================
+   SECCIÓN: NOCHES (EVENTOS)
+   ========================================================================== */
+.text-amarillo-farol {
+    color: var(--amarillo-farol) !important;
+}
+
+.text-plata-luna {
+    color: var(--plata-luna) !important;
+}
+
+.bg-amarillo-farol {
+    background-color: var(--amarillo-farol) !important;
+}
+
+.bg-plata-luna {
+    background-color: var(--plata-luna) !important;
+}
+
+.bg-rojo-sangre {
+    background-color: var(--rojo-sangre) !important;
+}
+
+.borde-amarillo-farol {
+    border: 1px solid rgba(255, 215, 0, 0.45) !important;
+}
+
+/* Bloque "Próximo evento" con brillo de farol */
+.proximo-evento {
+    background: radial-gradient(circle at 50% 0%, rgba(255, 215, 0, 0.18) 0%, var(--azul-oscuro) 70%);
+    border: 1px solid rgba(255, 215, 0, 0.45);
+    box-shadow: 0 0 25px rgba(255, 215, 0, 0.12);
+}
+
+.contador-bloque {
+    min-width: 75px;
+    padding: 10px;
+    border-radius: 8px;
+    background-color: var(--gris-tarjeta);
+    border: 1px solid var(--plata-luna);
+}
+
+.contador-bloque span {
+    display: block;
+    font-size: 2rem;
+    font-weight: bold;
+    color: var(--amarillo-farol);
+    line-height: 1.1;
+}
+
+.contador-bloque small {
+    color: var(--plata-luna);
+    text-transform: uppercase;
+    font-size: 0.7rem;
+}
+
+.btn-outline-farol {
+    color: var(--amarillo-farol);
+    border: 1px solid var(--amarillo-farol);
+}
+
+.btn-outline-farol:hover,
+.btn-outline-farol:focus {
+    color: var(--gris-oscuro);
+    background-color: var(--amarillo-farol);
+}
+
+/* Eventos que ya pasaron se muestran atenuados */
+.evento-pasado .card {
+    opacity: 0.5;
+}
+
+.consejo-noche {
+    background-color: var(--gris-tarjeta);
+    border-left: 3px solid var(--amarillo-farol);
+}

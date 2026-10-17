@@ -1,29 +1,99 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>PPI115 - 2026 - RutaMisterioSV | Leyendas</title>
-    <meta name="description" content="Conoce las leyendas y mitos de El Salvador.">
+
+    <!-- Google Analytics (GA4) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-XXXXXXXXXX');
+    </script>
+
+    <meta name="description" content="Conoce las leyendas y mitos de El Salvador y recorre los lugares donde la tradición oral sigue viva.">
+    <meta name="keywords" content="leyendas salvadoreñas, mitos de El Salvador, La Siguanaba, El Cipitío, El Cadejo, Puerta del Diablo, ruta de leyendas">
+    <meta name="author" content="Equipo de Desarrollo PPI115">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://rutamisteriosv.netlify.app/secciones/rutas_leyendas.html">
+
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="RutaMisterioSV">
+    <meta property="og:locale" content="es_SV">
+    <meta property="og:url" content="https://rutamisteriosv.netlify.app/secciones/rutas_leyendas.html">
+    <meta property="og:title" content="RutaMisterioSV | Ruta de Leyendas Salvadoreñas">
+    <meta property="og:description" content="La Siguanaba, el Cipitío, el Cadejo y los lugares encantados de El Salvador. Conoce sus historias y planifica tu ruta.">
+    <meta property="og:image" content="https://rutamisteriosv.netlify.app/img/logo.png">
+    <meta property="og:image:alt" content="Logotipo de RutaMisterioSV con un volcán y una luna">
+
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://rutamisteriosv.netlify.app/secciones/rutas_leyendas.html">
+    <meta name="twitter:title" content="RutaMisterioSV | Ruta de Leyendas Salvadoreñas">
+    <meta name="twitter:description" content="Conoce los mitos y leyendas de El Salvador y los lugares donde se cuentan.">
+    <meta name="twitter:image" content="https://rutamisteriosv.netlify.app/img/logo.png">
     <link rel="icon" href="../img/favicon.png" type="image/png">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
     <link rel="stylesheet" href="../css/website.css">
+
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "BreadcrumbList",
+          "itemListElement": [
+            { "@type": "ListItem", "position": 1, "name": "Inicio", "item": "https://rutamisteriosv.netlify.app/" },
+            { "@type": "ListItem", "position": 2, "name": "Leyendas", "item": "https://rutamisteriosv.netlify.app/secciones/rutas_leyendas.html" }
+          ]
+        },
+        {
+          "@type": "CollectionPage",
+          "name": "Ruta de Leyendas Salvadoreñas",
+          "url": "https://rutamisteriosv.netlify.app/secciones/rutas_leyendas.html",
+          "inLanguage": "es",
+          "mainEntity": {
+            "@type": "ItemList",
+            "itemListElement": [
+              { "@type": "ListItem", "position": 1, "item": { "@type": "CreativeWork", "name": "La Siguanaba", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 2, "item": { "@type": "CreativeWork", "name": "El Cipitío", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 3, "item": { "@type": "CreativeWork", "name": "El Cadejo", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 4, "item": { "@type": "CreativeWork", "name": "La Carreta Chillona", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 5, "item": { "@type": "CreativeWork", "name": "El Padre sin Cabeza", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 6, "item": { "@type": "CreativeWork", "name": "La Cuyancúa", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 7, "item": { "@type": "CreativeWork", "name": "La Puerta del Diablo", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 8, "item": { "@type": "CreativeWork", "name": "La Laguna de Alegría", "genre": "Leyenda salvadoreña" } },
+              { "@type": "ListItem", "position": 9, "item": { "@type": "CreativeWork", "name": "El Lago de Ilopango", "genre": "Leyenda salvadoreña" } }
+            ]
+          }
+        }
+      ]
+    }
+    </script>
 </head>
+
 <body class="bg-fondo-oscuro text-light d-flex flex-column min-vh-100">
-    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-nacional py-1">
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-azul-nacional py-1" aria-label="Navegación principal">
         <div class="container">
             <a class="navbar-brand d-flex align-items-center gap-2 py-0" href="../index.html">
-                <img src="../img/favicon.png" class="icon-navbar img-fluid" style="max-height: 35px; width: auto;">
+                <img src="../img/favicon.png" class="icon-navbar img-fluid" alt="Isotipo de RutaMisterioSV">
                 <span class="fw-bold fs-6 text-blanco-sv">RutaMisterioSV</span>
             </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegación">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
                     <li class="nav-item"><a class="nav-link py-1" href="../index.html">Inicio</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="lugares_abandonados.html">Lugares Abandonados</a></li>
-                    <li class="nav-item"><a class="nav-link active py-1" href="rutas_leyendas.html">Leyendas</a></li>
+                    <li class="nav-item"><a class="nav-link active py-1 text-lila-niebla" aria-current="page" href="rutas_leyendas.html">Leyendas</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="relatos.html">Relatos</a></li>
                     <li class="nav-item"><a class="nav-link py-1" href="eventos.html">Noches</a></li>
                 </ul>
@@ -32,28 +102,295 @@
     </nav>
 
     <div class="container mt-4">
-        <nav aria-label="breadcrumb">
-            <ol class="breadcrumb">
-                <li class="breadcrumb-item"><a href="../index.html">Inicio</a></li>
-                <li class="breadcrumb-item active text-blanco-sv" aria-current="page">Leyendas</li>
+        <nav aria-label="Ruta de navegación">
+            <ol class="breadcrumb bg-gris-tarjeta borde-lila-niebla p-2 rounded">
+                <li class="breadcrumb-item"><a href="../index.html" class="text-cian-espectral">Inicio</a></li>
+                <li class="breadcrumb-item active text-lila-niebla" aria-current="page">Leyendas</li>
             </ol>
         </nav>
     </div>
 
-    <main class="container my-4">
-        <h1 class="text-info fw-bold mb-3">Leyendas Salvadoreñas</h1>
-        <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nulla vitae elit libero, a pharetra augue.</p>
-        <div class="bg-dark p-4 rounded borde-azul shadow-sm">
-            <h3>Mito de Relleno</h3>
-            <p>Vestibulum id ligula porta felis euismod semper. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p>
+    <main class="container my-4 reveal">
+
+        <h1 class="text-lila-niebla fw-bold mb-3">Ruta de Leyendas Salvadoreñas</h1>
+        <p class="lead text-gris-ceniza mb-5">Cuando cae la noche, el monte, los ríos y las calles empedradas cuentan otras
+            historias. Conoce a los personajes de nuestra tradición oral y los lugares donde todavía se habla de ellos.</p>
+
+        
+        <div class="contenedor-filtros">
+            <input type="text" id="buscador-leyendas" placeholder="Buscar leyenda por nombre..." class="input-busqueda"
+                aria-label="Buscar leyenda por nombre">
+
+            <select id="filtro-tipo" class="select-filtro" aria-label="Filtrar por tipo de leyenda">
+                <option value="todos">Todos los tipos</option>
+                <option value="espanto">Espantos</option>
+                <option value="criatura">Criaturas del monte</option>
+                <option value="lugar">Lugares encantados</option>
+            </select>
         </div>
+
+        
+        <div class="row g-4 mb-5">
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="espanto">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-moon-stars"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-morado-brujo mb-2" style="width: fit-content;">Espanto</span>
+                        <h3 class="card-title text-lila-niebla fs-4">La Siguanaba</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Ríos, pozas y quebradas de todo el país</p>
+                        <p class="card-text text-gris-ceniza">Se aparece como una mujer hermosa de cabello largo que lava ropa a
+                            la orilla del río. Los hombres que la siguen de noche descubren, demasiado tarde, que su rostro
+                            es el de un caballo o una calavera.</p>
+                        <div class="collapse" id="masSiguanaba">
+                            <p class="card-text text-gris-ceniza">La tradición cuenta que fue Sihuehuet, una mujer castigada
+                                por los dioses por su vanidad e infidelidad, condenada a vagar por siempre. Se dice que quien la
+                                ve queda "siguanabo": pierde el juicio y vaga por el monte. Para protegerse, los abuelos
+                                recomendaban morder una cruz o un machete.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masSiguanaba" aria-expanded="false" aria-controls="masSiguanaba">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="criatura">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-tree"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-verde-cipitio mb-2" style="width: fit-content;">Criatura del monte</span>
+                        <h3 class="card-title text-lila-niebla fs-4">El Cipitío</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Zonas rurales y cocinas de leña</p>
+                        <p class="card-text text-gris-ceniza">Un niño eterno de panza grande, sombrero enorme y pies al revés.
+                            Come la ceniza de los fogones y lanza piedritas y flores a las muchachas que le gustan.</p>
+                        <div class="collapse" id="masCipitio">
+                            <p class="card-text text-gris-ceniza">Es hijo de la Siguanaba, condenado a no crecer nunca. Es más
+                                travieso que malvado: se ríe de quienes intentan seguirle el rastro, porque sus huellas apuntan
+                                en dirección contraria a la que camina.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masCipitio" aria-expanded="false" aria-controls="masCipitio">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="criatura">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-eye"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-verde-cipitio mb-2" style="width: fit-content;">Criatura del monte</span>
+                        <h3 class="card-title text-lila-niebla fs-4">El Cadejo</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Caminos solitarios de madrugada</p>
+                        <p class="card-text text-gris-ceniza">Un perro enorme de ojos rojos que se aparece a quienes caminan
+                            solos de noche. Hay dos: el blanco, que protege, y el negro, que acecha.</p>
+                        <div class="collapse" id="masCadejo">
+                            <p class="card-text text-gris-ceniza">Se dice que el Cadejo blanco acompaña a los borrachos y
+                                trasnochados para que lleguen a salvo a casa, mientras que el negro intenta llevarlos por mal
+                                camino. Cuando ambos se encuentran, pelean hasta el amanecer.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masCadejo" aria-expanded="false" aria-controls="masCadejo">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="espanto">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-cart"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-morado-brujo mb-2" style="width: fit-content;">Espanto</span>
+                        <h3 class="card-title text-lila-niebla fs-4">La Carreta Chillona</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Calles empedradas de pueblos coloniales</p>
+                        <p class="card-text text-gris-ceniza">A medianoche se escucha el chirrido de una carreta sin bueyes
+                            que recorre las calles. Nadie debe asomarse a la ventana para verla pasar.</p>
+                        <div class="collapse" id="masCarreta">
+                            <p class="card-text text-gris-ceniza">Algunos dicen que la conduce la Muerte y que va cargada de
+                                almas; otros, que es el castigo de un hombre que se burló de los difuntos. Quien la mira de
+                                frente, según la tradición, es el próximo en subir.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masCarreta" aria-expanded="false" aria-controls="masCarreta">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="espanto">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-person-x"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-morado-brujo mb-2" style="width: fit-content;">Espanto</span>
+                        <h3 class="card-title text-lila-niebla fs-4">El Padre sin Cabeza</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Iglesias y caminos antiguos</p>
+                        <p class="card-text text-gris-ceniza">Un sacerdote vestido de sotana que camina sin cabeza cerca de
+                            las iglesias viejas, buscando quién termine la misa que dejó pendiente.</p>
+                        <div class="collapse" id="masPadre">
+                            <p class="card-text text-gris-ceniza">La leyenda dice que fue un cura que faltó a sus votos y fue
+                                condenado a vagar. A veces se le ve a lo lejos rezando; quienes se acercan descubren que
+                                bajo el cuello de la sotana no hay nada.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masPadre" aria-expanded="false" aria-controls="masPadre">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="criatura">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-cloud-rain"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-verde-cipitio mb-2" style="width: fit-content;">Criatura del monte</span>
+                        <h3 class="card-title text-lila-niebla fs-4">La Cuyancúa</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Izalco, Sonsonate</p>
+                        <p class="card-text text-gris-ceniza">Mitad serpiente y mitad cerdo, vive en los ríos y barrancos de
+                            Izalco. Su silbido anuncia que se acercan las lluvias.</p>
+                        <div class="collapse" id="masCuyancua">
+                            <p class="card-text text-gris-ceniza">Es una de las criaturas de origen náhuat-pipil más antiguas.
+                                Los campesinos escuchaban su chillido antes de sembrar, porque significaba que el invierno
+                                estaba cerca y la tierra pronto se mojaría.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masCuyancua" aria-expanded="false" aria-controls="masCuyancua">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="lugar">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-door-open"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-cafe-tierra mb-2" style="width: fit-content;">Lugar encantado</span>
+                        <h3 class="card-title text-lila-niebla fs-4">La Puerta del Diablo</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Panchimalco, San Salvador</p>
+                        <p class="card-text text-gris-ceniza">Dos enormes rocas partidas en lo alto del cerro Chulo. La
+                            tradición dice que fueron separadas por el mismísimo diablo.</p>
+                        <div class="collapse" id="masPuerta">
+                            <p class="card-text text-gris-ceniza">Cuenta la leyenda que el diablo persiguió a una joven hasta
+                                la cima y, al no alcanzarla, golpeó la montaña con tanta furia que la partió en dos. Hoy es
+                                un mirador turístico con una vista impresionante del valle y del lago de Ilopango.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masPuerta" aria-expanded="false" aria-controls="masPuerta">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="lugar">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-water"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-cafe-tierra mb-2" style="width: fit-content;">Lugar encantado</span>
+                        <h3 class="card-title text-lila-niebla fs-4">La Laguna de Alegría</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> Alegría, Usulután</p>
+                        <p class="card-text text-gris-ceniza">Una laguna verde esmeralda dentro del cráter del volcán
+                            Tecapa. Los lugareños hablan de una sirena que habita sus aguas.</p>
+                        <div class="collapse" id="masLaguna">
+                            <p class="card-text text-gris-ceniza">Según la tradición, la sirena atrae a los hombres jóvenes
+                                con su canto hasta el centro de la laguna, de donde nunca regresan. Por eso los abuelos
+                                aconsejaban no visitarla solos al caer la tarde.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masLaguna" aria-expanded="false" aria-controls="masLaguna">Leer más</button>
+                    </div>
+                </article>
+            </div>
+
+            <div class="col-md-6 col-lg-4 tarjeta-leyenda" data-tipo="lugar">
+                <article class="card h-100 bg-gris-tarjeta borde-lila-niebla text-light shadow">
+                    <div class="cabecera-leyenda rounded-top" aria-hidden="true"><i class="bi bi-tsunami"></i></div>
+                    <div class="card-body d-flex flex-column">
+                        <span class="badge bg-cafe-tierra mb-2" style="width: fit-content;">Lugar encantado</span>
+                        <h3 class="card-title text-lila-niebla fs-4">El Lago de Ilopango</h3>
+                        <p class="text-secondary small fw-bold"><i class="bi bi-geo-alt-fill"></i> San Salvador, Cuscatlán y La Paz</p>
+                        <p class="card-text text-gris-ceniza">Un lago nacido de una de las erupciones más grandes de la
+                            historia de Centroamérica. Dicen que cada año "se cobra" una vida.</p>
+                        <div class="collapse" id="masIlopango">
+                            <p class="card-text text-gris-ceniza">La creencia popular relaciona el lago con antiguos rituales
+                                de ofrenda a las aguas. En el centro se levantan los Cerros Quemados, islotes que aparecieron
+                                tras la actividad volcánica de 1880 y que alimentan aún más su misterio.</p>
+                        </div>
+                        <button class="btn btn-sm btn-outline-leyenda mt-auto" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#masIlopango" aria-expanded="false" aria-controls="masIlopango">Leer más</button>
+                    </div>
+                </article>
+            </div>
+        </div>
+
+        <p id="sin-resultados" class="text-center text-gris-ceniza d-none">No encontramos leyendas con ese criterio... quizá
+            se esconden mejor de lo que creías.</p>
+
+        
+        <section class="mb-5" aria-labelledby="titulo-ruta">
+            <h2 id="titulo-ruta" class="text-lila-niebla fw-bold mb-3"><i class="bi bi-signpost-split"></i> Ruta sugerida de un día</h2>
+            <p class="text-gris-ceniza">Un recorrido para visitar algunos de los escenarios de nuestras leyendas en la zona central.</p>
+
+            <ol class="ruta-leyendas list-unstyled">
+                <li>
+                    <span class="ruta-hora">7:00 a. m.</span>
+                    <h3 class="fs-5 mb-1">Puerta del Diablo, Panchimalco</h3>
+                    <p class="text-gris-ceniza mb-0">Sube temprano al mirador para ver el amanecer sobre el valle y escuchar
+                        la leyenda de las rocas partidas.</p>
+                </li>
+                <li>
+                    <span class="ruta-hora">10:00 a. m.</span>
+                    <h3 class="fs-5 mb-1">Pueblo de Panchimalco</h3>
+                    <p class="text-gris-ceniza mb-0">Recorre su iglesia colonial y pregunta a los vecinos por los espantos
+                        del pueblo: la tradición oral está viva.</p>
+                </li>
+                <li>
+                    <span class="ruta-hora">1:00 p. m.</span>
+                    <h3 class="fs-5 mb-1">Lago de Ilopango</h3>
+                    <p class="text-gris-ceniza mb-0">Almuerza a la orilla del lago y observa a lo lejos los Cerros Quemados.</p>
+                </li>
+                <li>
+                    <span class="ruta-hora">5:00 p. m.</span>
+                    <h3 class="fs-5 mb-1">Suchitoto</h3>
+                    <p class="text-gris-ceniza mb-0">Cierra el día en sus calles empedradas al anochecer... y si escuchas un
+                        chirrido de ruedas, no te asomes.</p>
+                </li>
+            </ol>
+
+            <div class="alert alert-leyenda small mt-3" role="note">
+                <strong><i class="bi bi-shield-check"></i> Recomendaciones:</strong> viaja acompañado, regresa antes de
+                que oscurezca en zonas de montaña y respeta las tradiciones y propiedades de las comunidades que visites.
+            </div>
+        </section>
+
+        
+        <section aria-labelledby="titulo-mapa">
+            <h2 id="titulo-mapa" class="text-lila-niebla fw-bold mb-3"><i class="bi bi-map"></i> Mapa de leyendas</h2>
+            <div id="mapa-leyendas" style="height: 400px; border-radius: 8px;" class="borde-lila-niebla shadow"
+                aria-label="Mapa interactivo con los lugares asociados a leyendas salvadoreñas"></div>
+        </section>
     </main>
 
-    <footer class="bg-azul-nacional text-center py-2 mt-auto">
+    <footer class="bg-azul-nacional text-center py-3 mt-auto">
         <div class="container">
-            <p class="mb-0 text-white small">&copy; 2026 RutaMisterioSV - Proyecto PPI115 UES.</p>
+            <h5>Nuestras redes sociales</h5>
+            <nav class="mb-2" aria-label="Redes sociales">
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://www.facebook.com/profile.php?id=61595268217591" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                    <i class="bi bi-facebook" aria-hidden="true"></i>
+                </a>
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://www.youtube.com/channel/UCs2xzsmyIChfH1NoHp3rJ5Q" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                    <i class="bi bi-youtube" aria-hidden="true"></i>
+                </a>
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://www.instagram.com/rutamisteriosv/" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
+                    <i class="bi bi-instagram" aria-hidden="true"></i>
+                </a>
+                <a class="text-cian-espectral text-decoration-none mx-2" href="https://x.com/rutamisterio_sv" target="_blank" rel="noopener noreferrer" aria-label="X">
+                    <i class="bi bi-twitter-x" aria-hidden="true"></i>
+                </a>
+            </nav>
+            <p class="mb-0 text-white small">
+                &copy; 2026 RutaMisterioSV - Practica Evaluada 1 - PPI115 Universidad de El
+                Salvador.
+            </p>
         </div>
     </footer>
+
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../js/global.js"></script>
+    <script src="../js/leyendas.js"></script>
 </body>
+
 </html>

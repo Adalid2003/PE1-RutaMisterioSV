@@ -36,9 +36,9 @@ document.addEventListener("DOMContentLoaded", function() {
     if (mapaElement) {
         const mapa = L.map('mapa-ruinas').setView([13.7941, -88.8965], 8);
 
-        L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
-            attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors &copy; <a href="https://carto.com/attributions">CARTO</a>',
-            maxZoom: 18
+        L.tileLayer('https://server.arcgisonline.com/ArcGIS/rest/services/Canvas/World_Dark_Gray_Base/MapServer/tile/{z}/{y}/{x}', {
+            attribution: 'Tiles &copy; Esri &mdash; Esri, HERE, Garmin, &copy; OpenStreetMap contributors',
+            maxZoom: 16
         }).addTo(mapa);
 
         const ubicaciones = [
