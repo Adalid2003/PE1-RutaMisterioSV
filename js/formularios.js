@@ -16,6 +16,12 @@ document.addEventListener("DOMContentLoaded", () => {
             if (boton) boton.disabled = true;
             mostrarEstado(estado, "Enviando…", "info");
 
+            const asuntoCorreo = form.querySelector('input[name="subject"]');
+            const asuntoElegido = form.querySelector('select[name="asunto"]');
+            if (asuntoCorreo && asuntoElegido) {
+                asuntoCorreo.value = "RutaMisterioSV - " + asuntoElegido.value;
+            }
+
             try {
                 const datos = new URLSearchParams(Array.from(new FormData(form).entries()));
                 const respuesta = await fetch("/", {

@@ -132,9 +132,10 @@
                     <form name="contacto" method="POST" data-netlify="true" netlify-honeypot="bot-field"
                         data-bs-theme="dark" data-exito="¡Gracias! Recibimos tu mensaje y te responderemos pronto.">
                         <input type="hidden" name="form-name" value="contacto">
-                <p class="d-none">
-                    <label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
-                </p>
+                        <input type="hidden" name="subject" data-remove-prefix value="Nuevo mensaje de contacto - RutaMisterioSV">
+                        <p class="d-none">
+                            <label>No llenar este campo: <input name="bot-field" tabindex="-1" autocomplete="off"></label>
+                        </p>
 
                         <div class="mb-3">
                             <label for="nombre" class="form-label">Nombre</label>
@@ -144,7 +145,7 @@
 
                         <div class="mb-3">
                             <label for="correo" class="form-label">Correo electrónico</label>
-                            <input type="email" class="form-control" id="correo" name="correo" required maxlength="120"
+                            <input type="email" class="form-control" id="correo" name="email" required maxlength="120"
                                 autocomplete="email">
                         </div>
 
