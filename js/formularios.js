@@ -28,9 +28,12 @@ document.addEventListener("DOMContentLoaded", () => {
                 form.reset();
                 mostrarEstado(estado, form.dataset.exito || "¡Gracias! Recibimos tu mensaje.", "success");
             } catch (error) {
+                const esLocal = location.protocol === "file:" || ["localhost", "127.0.0.1"].includes(location.hostname);
                 mostrarEstado(
                     estado,
-                    "No pudimos enviar el formulario. Inténtalo de nuevo en unos minutos o escríbenos por nuestras redes sociales.",
+                    esLocal
+                        ? "Los formularios solo funcionan en el sitio publicado en Netlify, no en una copia local."
+                        : "No pudimos enviar el formulario. Inténtalo de nuevo en unos minutos o escríbenos por nuestras redes sociales.",
                     "danger"
                 );
             } finally {
